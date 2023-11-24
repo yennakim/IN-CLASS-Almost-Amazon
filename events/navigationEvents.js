@@ -1,7 +1,7 @@
 import { signOut } from '../utils/auth';
 import { booksOnSale, getBooks } from '../api/bookData';
 import { showBooks } from '../pages/books';
-import { getAuthors } from '../api/authorData';
+import { favoriteAuthors, getAuthors } from '../api/authorData';
 import { showAuthors } from '../pages/authors';
 
 // navigation events
@@ -26,6 +26,11 @@ const navigationEvents = () => {
   // 3. If the array is empty because there are no authors, make sure to use the emptyAuthor function
   document.querySelector('#authors').addEventListener('click', () => {
     getAuthors().then(showAuthors);
+  });
+
+  // TODO: Favorite Authors
+  document.querySelector('#favorite-authors').addEventListener('click', () => {
+    favoriteAuthors().then(showAuthors);
   });
 
   // STRETCH: SEARCH

@@ -9,13 +9,10 @@ const viewAuthor = (obj) => {
   Author Email: <a href="mailto:${obj.email}">${obj.email}</a>
   <h6><i class="fas fa-edit btn btn-info" id="update-author--${obj.firebaseKey}"></i>
   <i class="btn btn-danger fas fa-trash-alt" id="delete-author-btn--${obj.firebaseKey}"></i></h6>   
-  <p>Books</p>
-        
+  <p>Books</p>  
   <hr>
 </div>
-
 <div class="mt-4 d-flex flex-wrap">
-
 `;
   let domString = '';
   obj.authorBooks.forEach((item) => {

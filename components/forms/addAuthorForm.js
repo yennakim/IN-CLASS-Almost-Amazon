@@ -16,9 +16,6 @@ const addAuthorForm = (obj = {}) => {
       <div class="form-group">
         <label for="title">Email</label>
         <input type="email" class="form-control" id="email" aria-describedby="Email" placeholder="Enter Email" value="${obj.email || ''}" required>
-      </div>
-      <div class="form-group" id="select-author">
-      </div>
       <div class="form-check">
         <input type="checkbox" class="form-check-input" id="favorite" ${obj.favorite ? 'checked' : ''}>
         <label class="form-check-label" for="favorite">Favorite</label>
